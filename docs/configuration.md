@@ -1,52 +1,74 @@
 # Configuration
 
-## Package Development
+## Biome Configuration
 
-The package uses `tsup` for building during development and publishing. The build configuration is in `tsup.config.ts`:
+The `biome.json` file configures linting, formatting, and import organization. Key settings include:
 
-```ts
-import { defineConfig } from 'tsup';
+### Formatting
+- 2-space indentation
+- 80 character line width
+- LF line endings
+- Single quotes for JS/TS, double quotes for JSX
+- Required semicolons
+- ES5-style trailing commas
 
-export default defineConfig({
-  entry: ['scripts/run.ts', '.lintstagedrc.js', 'commitlint.config.js'],
-  format: ['cjs', 'esm'],
-  clean: true,
-  outDir: 'build',
-  minify: true,
-  sourcemap: true,
-  dts: false,
-  splitting: false,
-  treeshake: true,
-  platform: 'node',
-  target: 'node18',
-});
-```
+### Linting Rules
+- All recommended rules enabled by default
+- Custom rules for:
+  - File naming (kebab-case)
+  - Import organization
+  - React/JSX conventions
+  - TypeScript best practices
 
-## Config Files
+### CSS Configuration
+- 2-space indentation
+- 80 character line width
+- Double quotes for values
+- No CSS modules by default
 
-The project includes several configuration files:
+### JSON Configuration
+- No comments allowed
+- No trailing commas
+- 2-space indentation
+- 80 character line width
 
-- `.lintstagedrc.js`: Configures lint-staged for pre-commit hooks
-- `commitlint.config.js`: Configures commit message linting
-- `tsconfig.json`: TypeScript configuration
-- `biome.json`: Biome linting and formatting rules
+## Git Configuration
 
-All config files are built to both CommonJS and ESM formats for maximum compatibility.
+The project uses several tools for code quality:
 
-## Biome
+- **Husky**: Git hooks for pre-commit checks
+- **lint-staged**: Runs linters on staged files
+- **commitlint**: Enforces conventional commit messages
 
-The `biome.json` file configures linting, formatting, and import organization.
+### Pre-commit Hooks
 
-Key settings include:
-- Enforced formatting (2-space indent, 80-char line width, single quotes, etc.)
-- Strict linting rules (with some customizations)
-- Import organization
-- File naming conventions
+The `.husky/pre-commit` hook runs:
+1. lint-staged for code formatting and linting
+2. commitlint for commit message validation
 
-## TypeScript
+## Editor Integration
 
-The `tsconfig.json` file is set up for strict type checking, with `strictNullChecks` enabled by default.
+### VSCode
 
-## VSCode
+The `.vscode/settings.json` file configures:
+- Biome as the default formatter
+- Format on save
+- Format on paste
+- TypeScript settings
 
-The `.vscode/settings.json` file ensures that Biome is used as the default formatter and that formatting is applied on save and paste. 
+### Other Editors
+
+For other editors, ensure:
+1. Biome is installed globally or in the project
+2. The editor is configured to use Biome for formatting
+3. Format on save is enabled
+
+## TypeScript Configuration
+
+The project uses strict TypeScript settings:
+- `strictNullChecks` enabled
+- No implicit any
+- Strict function types
+- No unused locals/parameters
+
+For more details on specific rules and configurations, see the [Advanced](./advanced.md) guide. 
