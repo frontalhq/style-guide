@@ -9,6 +9,6 @@ The main entry point is `scripts/run.ts`, which provides the following commands:
 Example usage:
 
 ```sh
-pnpm ts-node scripts/run.ts lint
-pnpm ts-node scripts/run.ts format
+pnpm @frontal/style-guide lint
+pnpm @frontal/style-guide format
 ``` 

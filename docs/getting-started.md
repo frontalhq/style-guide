@@ -13,7 +13,7 @@ pnpm add -D @frontal/style-guide @biomejs/biome husky lint-staged @commitlint/cl
 Run the initialization command to set up configuration files and editor settings:
 
 ```sh
-npx style-guide init
+npx @frontal/style-guide init
 ```
 
 This will:
