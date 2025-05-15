@@ -3,31 +3,6 @@
 import { execSync } from 'node:child_process';
 import { Command } from 'commander';
 
-type BiomeConfig = {
-  $schema: string;
-  extends: string[];
-};
-
-type VSCodeSettings = {
-  'typescript.tsdk': string;
-  'editor.defaultFormatter': string;
-  'editor.formatOnSave': boolean;
-  'editor.formatOnPaste': boolean;
-  'emmet.showExpandedAbbreviation': string;
-  'editor.codeActionsOnSave': {
-    'source.fixAll.biome': string;
-    'source.organizeImports.biome': string;
-  };
-  [key: string]: unknown;
-};
-
-type TSConfig = {
-  compilerOptions: {
-    strictNullChecks: boolean;
-    [key: string]: unknown;
-  };
-};
-
 const program = new Command();
 
 program
@@ -40,13 +15,13 @@ program
   .action(() => {
     try {
       // Create biome.json config
-      const biomeConfig: BiomeConfig = {
+      const biomeConfig = {
         $schema: 'https://biomejs.dev/schemas/1.9.4/schema.json',
         extends: ['@frontal/style-guide'],
       };
 
       // Create .vscode/settings.json
-      const vsCodeSettings: VSCodeSettings = {
+      const vsCodeSettings = {
         'typescript.tsdk': 'node_modules/typescript/lib',
         'editor.defaultFormatter': 'biomejs.biome',
         'editor.formatOnSave': true,
@@ -74,7 +49,7 @@ program
       };
 
       // Create or merge tsconfig.json
-      let tsConfig: TSConfig = {
+      let tsConfig = {
         compilerOptions: {
           strictNullChecks: true,
         },
@@ -83,7 +58,7 @@ program
       try {
         const existingTsConfig = JSON.parse(
           execSync('cat tsconfig.json', { encoding: 'utf-8' })
-        ) as TSConfig;
+        );
         tsConfig = {
           ...existingTsConfig,
           compilerOptions: {
