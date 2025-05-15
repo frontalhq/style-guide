@@ -95,7 +95,3 @@ For more detailed information, check out our documentation:
 - [CLI Usage](docs/cli.md)
 - [Advanced Usage](docs/advanced.md)
 - [FAQ](docs/faq.md)
-
-## Version
-
-Current version: 4.2.4
