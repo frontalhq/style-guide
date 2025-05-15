@@ -1,5 +1,5 @@
 {
-  "name": "style-guide",
+  "name": "@frontal/style-guide",
   "description": "Robust linting for modern TypeScript apps.",
   "files": [
     "biome.json",
@@ -31,6 +31,10 @@
       "first-time-contributor",
       "released"
     ]
+  },
+  "author": {
+    "name": "Gabriel Fonseca",
+    "email": "jg.fonseca@outlook.pt"
   },
   "bugs": {
     "url": "https://github.com/frontalhq/style-guide/issues"
