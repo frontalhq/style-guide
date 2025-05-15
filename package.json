@@ -1,11 +1,14 @@
 {
   "name": "style-guide",
   "description": "Robust linting for modern TypeScript apps.",
-  "files": ["biome.json", "build"],
+  "files": [
+    "biome.json",
+    "build"
+  ],
   "homepage": "https://github.com/frontalhq/style-guide#readme",
   "license": "ISC",
   "main": "./biome.json",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "contributors": [
     {
       "name": "Gabriel Fonseca",
