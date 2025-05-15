@@ -46,7 +46,10 @@
     "test:watch": "vitest",
     "changeset": "changeset",
     "version": "changeset version",
-    "release": "changeset publish"
+    "release": "changeset publish",
+    "style:init": "node ./scripts/action.mjs init",
+    "style:lint": "node ./scripts/action.mjs lint",
+    "style:format": "node ./scripts/action.mjs format"
   },
   "repository": {
     "type": "git",
