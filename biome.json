@@ -10,6 +10,27 @@
     "attributePosition": "auto"
   },
   "organizeImports": { "enabled": true },
+  "files": {
+    "include": [
+      "src/**/*",
+      "test/**/*",
+      "scripts/**/*",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.json",
+      "**/*.css"
+    ],
+    "ignore": [
+      "node_modules",
+      "dist",
+      "build",
+      "public",
+      "public/**",
+      "public/**/**"
+    ]
+  },
   "linter": {
     "enabled": true,
     "rules": {
