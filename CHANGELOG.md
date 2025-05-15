@@ -1,5 +1,15 @@
 # v1.0.0 (Thu May 15 2025)
 
+## 1.1.0
+
+### Minor Changes
+
+- c59e1b8: feat(cli): improve CLI usability
+
+  - Add shorter `frontal-style` alias for CLI commands
+  - Update bin configuration to use correct script path
+  - Make CLI script executable
+
 ## 1.0.0
 
 ### Major Changes
