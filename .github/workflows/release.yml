@@ -8,11 +8,16 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  packages: write
+  issues: write
 
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    environment:
+      name: release
+      url: ${{ steps.changesets.outputs.pullRequestUrl }}
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
