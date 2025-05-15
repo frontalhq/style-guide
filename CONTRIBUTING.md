@@ -1,4 +1,4 @@
-# Contributing to Frontal Style Guide
+# Contributing to @frontal/style-guide
 
 Thank you for your interest in contributing! This document outlines the process for contributing to our project.
 

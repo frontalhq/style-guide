@@ -1,4 +1,4 @@
-# @frontal/guide-style
+# Style-Guide
 
 ## Introduction
 

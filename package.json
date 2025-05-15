@@ -1,10 +1,7 @@
 {
   "name": "@frontal/style-guide",
   "description": "Robust linting for modern TypeScript apps.",
-  "files": [
-    "biome.json",
-    "build"
-  ],
+  "files": ["biome.json", "build"],
   "homepage": "https://github.com/frontalhq/style-guide#readme",
   "license": "ISC",
   "main": "./biome.json",
@@ -40,7 +37,7 @@
     "url": "https://github.com/frontalhq/style-guide/issues"
   },
   "bin": {
-    "@frontal/style-guide": "build/scripts/run.js"
+    "style-guide": "build/scripts/run.js"
   },
   "scripts": {
     "prepare": "husky",
