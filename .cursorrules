@@ -1,0 +1,89 @@
+# Style Guide Project Rules and Configuration
+
+## Project Overview
+This is a robust linting configuration for modern TypeScript applications, built on top of Biome. The project provides a standardized set of rules and configurations for code formatting, linting, and organization.
+
+## Project Structure
+```
+.
+├── .github/          # GitHub workflows and templates
+├── .husky/           # Git hooks configuration
+├── .vscode/          # VS Code settings
+├── docs/             # Project documentation
+├── scripts/          # Utility scripts
+├── tests/            # Test files
+├── biome.json        # Main Biome configuration
+├── package.json      # Project dependencies and scripts
+└── various config files
+```
+
+## Key Dependencies
+- @biomejs/biome: 1.9.4 (Linting and formatting)
+- @commitlint/cli: ^19.8.1 (Commit message linting)
+- husky: ^9.1.7 (Git hooks)
+- lint-staged: ^16.0.0 (Pre-commit linting)
+- commander: ^12.1.0 (CLI tool)
+
+## Code Style Rules
+
+### Formatting
+- Indent style: spaces
+- Indent width: 2 spaces
+- Line ending: LF
+- Line width: 80 characters
+- Quote style: single quotes for JS/TS, double quotes for JSX
+- Semicolons: required
+- Trailing commas: ES5 style
+
+### File Naming
+- Files must use either kebab-case or snake_case
+- ASCII characters only
+- Examples: `my-component.tsx`, `utils.ts`, `api_client.ts`
+
+### Import Rules
+- Imports are automatically organized
+- No namespace imports allowed
+- No default exports (configurable)
+
+### React/JSX Rules
+- Double quotes for JSX attributes
+- No React-specific prop validation
+- Array index keys are allowed
+- No autofocus restrictions
+
+### CSS Rules
+- Double quotes for CSS values
+- No CSS modules by default
+- 2-space indentation
+- 80 character line width
+
+### JSON Rules
+- No comments allowed
+- No trailing commas
+- 2-space indentation
+- 80 character line width
+
+## Git Configuration
+- Default branch: main
+- Uses .gitignore for VCS
+- Conventional commits enforced
+- Pre-commit hooks for linting
+
+## Development Workflow
+1. Install dependencies with pnpm
+2. Code changes should follow the style guide
+3. Commits must follow conventional commit format
+4. Pre-commit hooks will run linting
+5. Changes are automatically formatted on save
+
+## Available Scripts
+- `prepare`: Sets up husky git hooks
+
+## Contributing
+- Follow the conventional commits specification
+- All contributions must pass linting
+- First-time contributors are welcomed
+- Use the provided GitHub templates for issues and PRs
+
+## Version
+Current version: 4.2.4 
