@@ -42,7 +42,7 @@
     "access": "public"
   },
   "bin": {
-    "frontal-style": "./scripts/action.mjs"
+    "@frontal/style-guide": "./scripts/action.mjs"
   },
   "scripts": {
     "prepare": "husky",
@@ -51,9 +51,9 @@
     "changeset": "changeset",
     "version": "changeset version",
     "release": "changeset publish",
-    "style:init": "node ./scripts/action.mjs init",
-    "style:lint": "node ./scripts/action.mjs lint",
-    "style:format": "node ./scripts/action.mjs format"
+    "init": "node ./scripts/action.mjs init",
+    "lint": "node ./scripts/action.mjs lint",
+    "format": "node ./scripts/action.mjs format"
   },
   "repository": {
     "type": "git",
