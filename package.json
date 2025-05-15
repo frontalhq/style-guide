@@ -38,7 +38,7 @@
     "url": "https://github.com/frontalhq/style-guide/issues"
   },
   "bin": {
-    "frontal-style": "./scripts/run.mjs"
+    "frontal-style": "./scripts/action.mjs"
   },
   "scripts": {
     "prepare": "husky",
