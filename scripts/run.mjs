@@ -85,11 +85,11 @@ program
       );
       execSync(`echo '${JSON.stringify(tsConfig, null, 2)}' > tsconfig.json`);
 
-      // biome-ignore lint: Don't care about this error
+      // biome-ignore lint: Console log is ok
       console.log('Successfully initialized style guide configuration!');
     } catch (error) {
-      // biome-ignore lint: Don't care about this error
-      console.error('Failed to run style guide:', (error as Error).message);
+      // biome-ignore lint: Console log is ok
+      console.error('Failed to run style guide:', error.message);
       process.exit(1);
     }
   });
@@ -101,8 +101,8 @@ program
     try {
       execSync('npx biome check ./', { stdio: 'inherit' });
     } catch (error) {
-      // biome-ignore lint: Don't care about this error
-      console.error('Failed to run style guide:', (error as Error).message);
+      // biome-ignore lint: Console log is ok
+      console.error('Failed to run style guide:', error.message);
       process.exit(1);
     }
   });
@@ -114,8 +114,8 @@ program
     try {
       execSync('npx biome check --write ./', { stdio: 'inherit' });
     } catch (error) {
-      // biome-ignore lint: Don't care about this error
-      console.error('Failed to run style guide:', (error as Error).message);
+      // biome-ignore lint: Console log is ok
+      console.error('Failed to run style guide:', error.message);
       process.exit(1);
     }
   });
