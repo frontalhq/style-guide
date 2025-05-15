@@ -86,7 +86,7 @@ program
       execSync(`echo '${JSON.stringify(tsConfig, null, 2)}' > tsconfig.json`);
 
       // biome-ignore lint: Console log is ok
-      console.log('Successfully initialized style guide configuration!');
+      console.log('Successfully initialized style guide configuration! ✨');
     } catch (error) {
       // biome-ignore lint: Console log is ok
       console.error('Failed to run style guide:', error.message);
