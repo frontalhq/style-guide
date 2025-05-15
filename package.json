@@ -1,0 +1,60 @@
+{
+  "name": "style-guide",
+  "description": "Robust linting for modern TypeScript apps.",
+  "files": ["biome.json", "build"],
+  "homepage": "https://github.com/frontalhq/style-guide#readme",
+  "license": "ISC",
+  "main": "./biome.json",
+  "version": "0.0.1",
+  "contributors": [
+    {
+      "name": "Gabriel Fonseca",
+      "url": "https://github.com/gabrielvfonseca"
+    }
+  ],
+  "keywords": [
+    "frontal",
+    "style-guide",
+    "biome",
+    "linter",
+    "formatter",
+    "fixer"
+  ],
+  "auto": {
+    "plugins": [
+      "npm",
+      "all-contributors",
+      "conventional-commits",
+      "first-time-contributor",
+      "released"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/frontalhq/style-guide/issues"
+  },
+  "bin": {
+    "@frontal/style-guide": "build/scripts/run.js"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "build": "tsup --config tsup.config.ts",
+    "@frontal/style-guide": "pnpm run build && build/scripts/run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontalhq/style-guide.git"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@types/node": "^22.15.18",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  }
+}
