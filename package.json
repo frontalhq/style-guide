@@ -40,7 +40,10 @@
     "build": "tsup --config tsup.config.ts",
     "@frontal/style-guide": "pnpm run build && build/scripts/run.js",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "changeset publish"
   },
   "repository": {
     "type": "git",
@@ -48,6 +51,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@changesets/cli": "^2.29.4",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@types/node": "^22.15.18",
