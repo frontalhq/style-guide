@@ -13,9 +13,9 @@ Add these scripts to your project's package.json:
 ```json
 {
   "scripts": {
-    "style:init": "node node_modules/@frontal/style-guide/scripts/action.mjs init",
-    "style:lint": "node node_modules/@frontal/style-guide/scripts/action.mjs lint",
-    "style:format": "node node_modules/@frontal/style-guide/scripts/action.mjs format"
+    "style:init": "node node_modules/@frontal/style-guide/scripts/run.mjs init",
+    "style:lint": "node node_modules/@frontal/style-guide/scripts/run.mjs lint",
+    "style:format": "node node_modules/@frontal/style-guide/scripts/run.mjs format"
   }
 }
 ```
